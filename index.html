@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TierraByte - Tu tienda de tecnología</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <h1>TierraByte</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h2>Bienvenido a TierraByte</h2>
+    <p>Tu tienda salvadoreña de productos tecnológicos. Calidad, servicio y confianza en cada venta.</p>
+  </section>
+
+  <section id="productos" class="seccion">
+    <h2>Productos Destacados</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn left" onclick="moverCarrusel(-1)">&#10094;</button>
+      <div class="carousel" id="carrusel">
+
+        <div class="producto producto1">
+          <h3>Laptop Lenovo IdeaPad 3</h3>
+          <p>Ideal para estudiantes y trabajo remoto.</p>
+        </div>
+
+        <div class="producto producto2">
+          <h3>Mouse Gamer Logitech G203</h3>
+          <p>Precisión y estilo para tus partidas.</p>
+        </div>
+
+        <div class="producto producto3">
+          <h3>Audífonos JBL Tune 510BT</h3>
+          <p>Sonido potente y conexión Bluetooth.</p>
+        </div>
+
+        <div class="producto producto4">
+          <h3>Router TP-Link AC1200</h3>
+          <p>Conectividad rápida y estable para tu hogar.</p>
+        </div>
+
+      </div>
+      <button class="carousel-btn right" onclick="moverCarrusel(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="nosotros" class="seccion">
+    <h2>¿Quiénes somos?</h2>
+    <p>En TierraByte ofrecemos lo último en computadoras, periféricos, redes y accesorios. Atendemos en San Miguel, El Salvador, brindando asesoría, garantía y productos 100% originales para hogares, estudiantes y negocios.</p>
+      <div class="mapa">
+  <h3>Ubicación de nuestra tienda:</h3>
+  <iframe 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.2023248803985!2d-88.1679962249743!3d13.461622186900629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7ad599b0ec7847%3A0xcc6739761dd5232c!2sMetrocentro%20San%20Miguel!5e0!3m2!1sen!2sde!4v1765320767955!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </iframe>
+</div>
+</section>
+
+  <section id="contacto" class="seccion">
+    <h2>Contáctanos</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required />
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TierraByte. Todos los derechos reservados. San Miguel, El Salvador.</p>
+  </footer>
+
+  <script>
+    function moverCarrusel(direccion) {
+      const carrusel = document.getElementById("carrusel");
+      carrusel.scrollBy({
+        left: direccion * 300,
+        behavior: "smooth",
+      });
+    }
+  </script>
+</body>
+</html>
